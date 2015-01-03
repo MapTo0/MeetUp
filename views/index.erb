@@ -16,16 +16,24 @@
 
 	<div id="login-form">
 		<h2 class="sub-headings">I have an account!</h2>
-		<form action="/signup" method="POST" accept-charset="utf-8">
+		<form action="/signin" method="POST" accept-charset="utf-8">
 			<input type="mail" name="email" placeholder="Email">
 			<input type="password" name="pass" placeholder="Password">
-			<button type="submit">Submit</button>
-			<span id="no-acc"><a href="">Don't have account yet?</a></span>
+			<button type="submit">Take me in !</button>
 		</form>
 	</div>
 
-	<aside>
-		<img src="images/meetup-logo.png" alt="logo" id="logo">
+	<aside id="signup-form">
+
+		<h2 class="sub-headings">I dont have an account!</h2>
+		<form action="/signup" method="POST" accept-charset="utf-8">
+			<input type="text" name="first_name" placeholder="First Name">
+			<input type="text" name="last_name" placeholder="Last Name">
+			<input type="mail" name="email" placeholder="Email">
+			<input type="password" name="password" placeholder="Password">
+			<button type="submit">Register me !</button>
+		</form>
+
 	</aside>
 
 		</main>
