@@ -1,7 +1,14 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'data_mapper'
+
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 
 get '/' do
-  "Hello World"
+  erb :index
 end
+
+require './models/init'
+
+DataMapper.finalize
